@@ -1,3 +1,4 @@
+/* mime: text/javascript */
 (function(){var eventHandlers={};var locationHash='';try{locationHash=location.hash.toString();}catch(e){}
 var initParams=urlParseHashParams(locationHash);var storedParams=sessionStorageGet('initParams');if(storedParams){for(var key in storedParams){if(typeof initParams[key]==='undefined'){initParams[key]=storedParams[key];}}}
 sessionStorageSet('initParams',initParams);var isIframe=false,iFrameStyle;try{isIframe=window.parent!=null&&window!=window.parent;if(isIframe){window.addEventListener('message',function(event){if(event.source!==window.parent)return;try{var dataParsed=JSON.parse(event.data);}catch(e){return;}
